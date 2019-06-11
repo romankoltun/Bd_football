@@ -1,0 +1,113 @@
+﻿@model Bd_web.Models.Profit
+@{
+    ViewData["Title"] = "Ticket";
+}
+
+<h1>Квитки</h1>
+
+<div class="left">
+    <form asp-action="Ticket">
+        <label fot="matchId">Матч</label>
+        <select name="matchId">
+            <option value="@ViewBag.SelectMatch">@ViewBag.SelectMatchName</option>
+
+            @foreach (Match match in ViewBag.Match)
+            {
+                if (match.Id == ViewBag.SelectMatch) { continue; }
+                <option value="@match.Id">@match.Name_M</option>
+            }
+        </select>
+        <label for="sector">Сектор</label>
+        <input name="sector" type="text" value="@ViewBag.sector" />
+
+        <input type="submit" value="Send">
+    </form>
+
+    @{
+        int i = 1;
+        int j = 1;
+    }
+
+
+    @foreach (var el in ViewBag.Ticket)
+    {
+        <div class="row">
+            @{j = 1; }
+            @foreach (var el1 in el)
+            {
+
+                @if (el1 == '0')
+                {
+                    <div class="ticket-block green" onclick="document.getElementById('sector').value = '@ViewBag.sector'; document.getElementById('row').value = '@i'; document.getElementById('place').value = '@j'; ">
+
+                    </div>
+                }
+                @if (el1 == '1')
+                {
+                    <div class="ticket-block red">
+
+                    </div>
+                }
+
+                j++;
+            }
+            @{i++;}
+
+        </div>
+    }
+</div>
+<div class="right">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="CreateTicket">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name_P" class="control-label"></label>
+                    <input asp-for="Name_P" class="form-control" />
+                    <span asp-validation-for="Name_P" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ShopeTypeId" class="control-label"></label>
+                    <select asp-for="ShopeTypeId" class="form-control" asp-items="ViewBag.ShopeTypeId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Money_p" class="control-label"></label>
+                    <input asp-for="Money_p" class="form-control" />
+                    <span asp-validation-for="Money_p" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Сектор</label>
+                    <input id="sector" name="sector" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Рядок</label>
+                    <input id="row" name="row" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"> Місце</label>
+                    <input id="place" name="seat" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Матч</label>
+                    <input class="form-control" value="@ViewBag.SelectMatchName" readonly/>
+                    <input name="stringMatchId" value="@ViewBag.SelectMatch" hidden/>
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -44,6 +44,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  padding-left:20px;
 }
 .footer {
   position: absolute;
@@ -53,4 +54,173 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.widget {
+    padding: 20px 30px;
+    background: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.widget-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 2px solid #b99d61;
+}
+
+.widget-list {
+    padding: 0;
+    list-style: none;
+}
+
+    .widget-list a:before {
+        content: "\2014";
+        margin-right: 14px;
+    }
+
+    .widget-list a {
+        text-decoration: none;
+        outline: none;
+        display: block;
+        padding: 6px 0;
+        letter-spacing: 1px;
+        font-weight: 300;
+        color: #444;
+        transition: .3s linear;
+    }
+
+        .widget-list a:hover {
+            color: #b99d61;
+        }
+        
+        .ticket-block{
+            min-height:20px;
+            min-width:20px;
+            margin:2px;
+        }
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+.table {
+    table-layout: fixed;
+    
+}
+.thticket {
+    overflow: scroll;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-size: 10px 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: .4s ease-in-out;
+}
+
+.topmenu {
+    backface-visibility: hidden;
+    background: rgba(255,255,255,.8);
+}
+
+    .topmenu > li {
+        display: inline-block;
+        position: relative;
+    }
+
+        .topmenu > li > a {
+            font-family: 'Exo 2', sans-serif;
+            height: 70px;
+            line-height: 70px;
+            padding: 0 30px;
+            font-weight: bold;
+            color: #003559;
+            text-transform: uppercase;
+        }
+
+.down:after {
+    content: "\f107";
+    margin-left: 8px;
+    font-family: FontAwesome;
+}
+
+.topmenu li a:hover {
+    color: #E6855F;
+}
+
+.submenu {
+    background: white;
+    border: 2px solid #003559;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 150px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: .6s ease-in-out;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.submenu li a {
+    color: #7f7f7f;
+    font-size: 13px;
+    line-height: 36px;
+    padding: 0 25px;
+    font-family: 'Kurale', serif;
+}
+
+.left {
+    min-width:50%;
+    float:left;
+
+}
+.right {
+    min-width:50%;
+    float:right;
+}
+.form-group {
+min-width:300px;
+}
+.Myfooter{
+    min-height:10px;
+    min-width:100%;
+    z-index:0;
+    background-color:#fff;
+    padding-left:600px;
+
+
+}
+.content{
+    padding-bottom:10px;
 }

@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Transfer";
+}
+
+<h1>Трансфер</h1>
+
+@model IEnumerable<Profit>
+
+
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name_P)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Money_p)
+            </th>
+            <th>
+                @Html.ActionLink("Date", "SortByDate")
+            </th>
+            <th>
+                <form asp-action="WithDateTransfer">
+
+                    <input type="date" name="date1" />
+                    <input type="date" name="date2" />
+
+                    <input type="submit" />
+                </form>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name_P)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShopeType.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Money_p)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

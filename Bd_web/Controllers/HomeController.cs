@@ -17,6 +17,7 @@ namespace Bd_web.Controllers
 
         public IActionResult Privacy()
         {
+            ViewBag.Message = "Your application descri";
             return View();
         }
 

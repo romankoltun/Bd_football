@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Bd_web.Models.Сosts>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Виплати</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name_C)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Money_C)
+            </th>
+            <th>
+                @Html.ActionLink("Date", "SortByDate")
+            </th>
+            <th>
+                <form asp-action="WithDate">
+                    
+                    <input type="date" name="date1" />
+                    <input type="date" name="date2" />
+
+                    <input type="submit" />
+                </form>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name_C)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShopeType.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Money_C)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Bd_web.Models.Profit>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Виплати</h1>
+<img src="~/Screenshot_2.png" />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+<div class="Myfooter">Бюджет на даний момент: @ViewBag.Sum</div>
+<div class="content">
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name_P)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShopeType.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Money_p)
+                </th>
+                <th>
+                    @Html.ActionLink("Date", "SortByDate")
+                </th>
+                <th>
+                    <form asp-action="WithDate">
+
+                        <input type="date" name="date1" />
+                        <input type="date" name="date2" />
+
+                        <input type="submit" />
+                    </form>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name_P)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShopeType.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Money_p)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

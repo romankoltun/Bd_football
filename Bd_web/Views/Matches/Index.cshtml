@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Bd_web.Models.Match>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Матчі</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name_M)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ticet_string)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTime)
+            </th>
+            <th>
+                <form asp-action="WithDatemATCH">
+
+                    <input type="date" name="date1" value="" />
+                    <input type="date" name="date2" />
+
+                    <input type="submit" />
+                </form>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name_M)
+            </td>
+            <td class="thticket">
+                @Html.DisplayFor(modelItem => item.Ticet_string)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

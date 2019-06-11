@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bd_web.Models.Club">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAABAAAAE=</HashCode>
+      <FileName>Models\Club.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.Club_Sponsor">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\Club_Sponsor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.ErrorViewModel">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.Footballer">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIAAIAAAAAA=</HashCode>
+      <FileName>Models\Footballer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.People">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Models\People.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.PersonalEnum">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PersonalEnum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.Profit">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAQAIAAAAAAAAAAAAAEAAABAIAgAAAAAAA=</HashCode>
+      <FileName>Models\Profit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.Shop">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Shop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.Sponsor">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Sponsor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bd_web.Models.Сosts">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAIAAAAAAAAAAAAAEAAABAIAgAAAAAAA=</HashCode>
+      <FileName>Models\Сosts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
